@@ -24,14 +24,24 @@ print(gpu[0]) # Mengambil value dari array 2D index 0
 sliceColumn = [row[1] for row in gpu] # Dari semua array yang ada, ambil masing-masing value array di index 1
 print(sliceColumn)
 
+# Print Semua Individual value dari array
+for row in gpu:
+       for value in row:
+              print(value, end=" ")
+
+
+
 # program untuk ekstraksi kata dari kalimat string
 
-data = "Simple Python Programming Language is Easy to Learn"
-splitted = data.split() #mengubah string menjadi list
+data = "Simple Python Programming Language is Easy to Learn\n"
 
-senLength = len(splitted)
-print("Total Words in Sentence: " + str(senLength))
-for word in splitted:
-       length = len(word)
-       print(word + " : " + str(length) + " characters\n")
-#
+def spliting(text):
+       splitted = text.split() #mengubah string menjadi list
+       senLength = len(splitted)
+       print("\nTotal Words in Sentence: " + str(senLength))
+       for word in splitted:
+              length = len(word)
+              print(word + " : " + str(length) + " characters\n")
+
+spliting(data)
+#      
